@@ -20,6 +20,58 @@
 #include <glm/gtx/normal.hpp>
 #include <glm/gtx/rotate_vector.hpp>
 
+#ifdef GENERATOR_OLD_GLM_TYPENAMES
+namespace glm {
+	template<class T>
+	using tvec2 = vec<2, T, defaultp>;
+
+	template<class T>
+	using tvec3 = vec<3, T, defaultp>;
+
+	template<class T>
+	using tvec4 = vec<4, T, defaultp>;
+
+	template<class T>
+	using tvec4 = vec<4, T, defaultp>;
+
+	template<class T>
+	using tmat2 = mat<2, 2, T, defaultp>;
+
+	template<class T>
+	using tmat2x2 = mat<2, 2, T, defaultp>;
+
+	template<class T>
+	using tmat2x3 = mat<2, 3, T, defaultp>;
+
+	template<class T>
+	using tmat2x4 = mat<2, 4, T, defaultp>;
+
+	template<class T>
+	using tmat3x2 = mat<3, 2, T, defaultp>;
+
+	template<class T>
+	using tmat3x3 = mat<3, 3, T, defaultp>;
+
+	template<class T>
+	using tmat3 = mat<3, 3, T, defaultp>;
+
+	template<class T>
+	using tmat3x4 = mat<3, 4, T, defaultp>;
+
+	template<class T>
+	using tmat4x2 = mat<4, 2, T, defaultp>;
+
+	template<class T>
+	using tmat4x3 = mat<4, 3, T, defaultp>;
+
+	template<class T>
+	using tmat4x4 = mat<4, 4, T, defaultp>;
+
+	template<class T>
+	using tmat4 = mat<4, 4, T, defaultp>;
+}
+#endif
+
 namespace gml {
 
 // Vectors

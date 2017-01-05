@@ -23,6 +23,11 @@ endif()
 
 if(GENERATOR_USE_GLM)
 	option(GENERATOR_SUFFIX_GLM "Suffix library name with 'glm' when using GLM (otherwise, does nothing)" OFF)
+	option(GENERATOR_OLD_GLM_TYPENAMES "Generate typedefs for the old 'tvec/tmat' naming conventions for GLM types" OFF)
+	if (GENERATOR_OLD_GLM_TYPENAMES AND GENERATOR_USE_GLM)
+		add_definitions(-DGENERATOR_OLD_GLM_TYPENAMES)
+	endif()
+
 	set(GLM_INCLUDE_DIR "" CACHE FILEPATH "GLM include path")
 
 	if(GENERATOR_SUFFIX_GLM AND GENERATOR_USE_GLM)
